@@ -1,0 +1,347 @@
+#active .container {
+    height: auto;
+    min-height: 100%;
+    background: url("../../assets/image/eImg/bg2.jpg") no-repeat left top/100% 4rem;
+    background-color: #f2f2f2;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 2.72rem;
+    padding-bottom: 1.6rem;
+    transition: all ease-in-out .8s;
+}
+#active .container.bg1{
+    background-image: url("../../assets/image/eImg/bg1.jpg");
+}
+#active .container.bg2{
+    background-image: url("../../assets/image/eImg/bg2.jpg");
+}
+#active .container.bg3{
+    background-image: url("../../assets/image/eImg/bg3.jpg");
+}
+#active .container.bg4{
+    background-image: url("../../assets/image/eImg/bg4.jpg");
+}
+#active .container.bg5{
+    background-image: url("../../assets/image/eImg/bg5.jpg");
+}
+.topTab {
+    height: 1.28rem;
+    background: #fff;
+    width:94%;
+    margin: 0 auto;
+    line-height: 1.28rem;
+    box-shadow: 0 -3px 10px #dce8ef inset;
+}
+.topTab .tab{
+    height: 1.28rem;
+    float: left;
+    color:#000;
+    width: 20%;
+    font-size: 0.3733rem;
+    text-align: center;
+}
+
+.topTab .tab.fangai{
+    background-color: #F0E2FF;
+}
+.topTab .tab.active{
+    background-color: #4F60FF;
+    color:#fff; 
+}
+
+.con_list {
+    padding:0 0.4rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.insure_items .item_title{
+    line-height: 1.44rem;
+    width: 100%;
+    font-size: 0.4267rem;
+    color: #333333;
+    text-align: left;
+    height: 1.44rem;
+    border-bottom: 1px solid #eee;
+}
+.insure_items .item_title span{
+    float: right;
+    font-size: 0.32rem;
+    color: #4E5FFD;
+}
+.item_options{    padding-top: 0.2667rem;}
+.item_options p{
+    color: #646464;
+    font-size: 0.3733rem;
+}
+
+.item_options .has::before{
+    background-image: url(../../assets/image/eImg/tick.png);
+    width: 0.5067rem;
+    content: "";
+    margin: 0 auto;
+    display: inline-block;
+    height: 0.5333rem;
+    background-repeat: no-repeat;
+    background-size: 0.2933rem;
+    background-position: 0.08rem 0.1067rem;
+    line-height: 0.5333rem;
+    vertical-align: middle;
+}
+.item_options .nothas{
+    color: #D5D4D4;
+    padding-left: 0.5067rem;
+}
+.item_options .nothas::before{
+    display: none;
+}
+.insure_select{
+    font-size: 0.3733rem;
+    color: #333;
+    line-height: 1.0667rem;
+}
+.insure_select>p{
+    display: inline-block;
+}
+.insure_select span{
+    font-size: 0.3733rem;
+    color: #000;
+    vertical-align: bottom;
+    /* font-weight: 600; */
+}
+.insure_select img{
+    width: 0.4rem;
+    vertical-align: text-top;
+    margin-left: 0.1067rem;
+}
+.Amount,.deductible,.scale{
+    width: 100%;
+    height: 1.5467rem;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top: 0.4rem;
+}
+.con_list .option{
+    float: left;
+    border-radius: 0.3733rem;
+    width: 1.5467rem;
+    line-height: 0.7467rem;
+    text-align: center;
+    background: #fff;
+    font-size: 0.3733rem;
+    color: #333;
+    margin-left: calc((100% - 7.7333rem) / 4);
+    border: 1px solid #979797;
+}
+.con_list .option.active{
+    background: #4F60FF;
+    color: #FFFFFF;
+    box-shadow: 0 1px 6px 0 #9AA3FF;
+    border: none;
+}
+.con_list .option.disable{
+    background: #F3F3F3;;
+    color: #BFBFBF;
+    border: 1px solid #F3F3F3;
+}
+
+.Amount .option img{
+    width: 0.32rem;
+}
+/* 额外保 */
+.exceptInsure,.Insured{
+    background-color: #fff;
+    margin-top: 0.2667rem;
+    width:100%;
+    box-sizing : border-box;
+    padding: 0 0.4rem 0.4rem 0.4rem;
+    position: relative;
+}
+.exceptInsure .title,.Insured .title{
+    line-height: 1.44rem;
+    width: 100%;
+    font-size: 0.4267rem;
+    color: #333333;
+    text-align: left;
+    height: 1.44rem;
+    border-bottom: 1px solid #eee;
+}
+.exceptInsure .t1{
+    font-size: 0.3733rem;
+    color: #333333;
+    line-height:0.9067rem;
+    margin-top: 0.32rem;
+}
+.exceptInsure.active .t1{
+    line-height:0.5333rem;
+}
+.exceptInsure .t1 img{
+    width: 0.32rem;
+    margin-left: 0.1333rem;
+}
+.exceptInsure .t2{
+    font-size: 0.32rem;
+    color: #9A9A9A;
+    line-height: 0.5333rem;
+}
+.exceptInsure .switch-group{
+    float: right;
+    margin-top: -1px;
+}
+.exceptInsure.active .switch-group{
+    margin-top: 3px
+}
+
+.exceptInsure .tiptop img{
+    margin-top: 5px;
+    height: 9px;
+    margin-left: 2px;
+    
+}
+.exceptInsure .tiptop{
+    /* display: none; */
+    position: absolute;
+    top:1.44rem;
+    left:0;
+    height: 0.48rem;
+    line-height: 0.4533rem;
+    left: 0.2667rem;
+    font-size: 0.32rem;
+    background: #C085FF;
+    padding-right: 0.32rem;
+    border-bottom-right-radius: 0.4533rem;
+    color: #fff;
+}
+
+.exceptInsure .selectWarp{
+    padding-top: 0.4533rem;
+}
+.exceptInsure.active .tiptop{
+    display: block
+}
+/* 被保人信息 */
+.Insured .t1,.Insured .t2{
+    font-size: 0.3733rem;
+    color: #333333;
+    line-height: 0.6933rem;
+    margin-top: 0.32rem;
+}
+.Insured .t1 .switch-group{
+    float: right;
+}
+.Insured .t2 .birtyday-selector{
+    float: right;
+}
+.moreDet{
+    font-size: 0.3733rem;
+    color: #666666;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height:1.2rem;
+    box-sizing: border-box;
+    padding: 0 0.4rem;
+}
+.moreDet span{
+    color:#68a5fe;
+    text-decoration: none;
+   
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 1.5261rem;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    clear: both;
+    border-top: 1px solid #eee;
+}
+
+.footer-left-content {
+    position: relative;
+    height: 100%;
+    width: 6.0515rem;
+    float: left;
+    padding: .32rem 0;
+    clear: both;
+}
+
+.kefu {
+    height: 100%;
+    width: 2.0523rem;
+    border-right: 1px solid #D8D8D8;
+    float: left;
+    line-height: 1.48rem;
+    text-align: center;
+}
+
+.kefu a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    font-size: 0.3157rem;
+    color: #666666;
+    background-image: url('../../assets/image/eImg/select_phone.png');
+    background-size: 0.4736rem;
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+.amounts {
+    height: 100%;
+    float: right;
+    text-align: center;
+    width: 3.9993rem;
+    line-height: 0.8946rem;
+    font-size: 0.7367rem;
+    color: #F9830C;
+}
+
+.amounts span {
+    font-size: 0.3683rem;
+}
+
+.footer-right-btn {
+    width: 3.8151rem;
+    height: 1.5261rem;
+    line-height: 1.5261rem;
+    background-color: #D6D6D6;
+    color: #fff;
+    font-size: 0.4267rem;
+    float: right;
+    text-align: center;
+}
+
+.footer-right-btn.active {
+    /* background-image: linear-gradient(228deg, #FFAE4C 0%, #ED6459 100%); */
+    background-color: #626AFD
+}
+.toptext .boxtitle{
+    color: #fff;
+    text-align: center;
+    font-size: 0.48rem;
+    height: 0.64rem;
+    line-height: 0.64rem;
+    margin-bottom: 0.2667rem;
+}
+.toptext{
+    width: 100%;
+    padding: 0.5333rem 0.4533rem;
+    box-sizing: border-box;
+    background-image: linear-gradient(-53deg, #4E6AF0 0%, #3F58CD 60%, #627AF1 100%);
+}
+.toptext p{
+    font-size: 0.4267rem;
+    color: #fff;
+}
+.bottomtext{
+    font-size: 0.3733rem;
+    color: #8A8A8A;
+    background: #fff;
+    padding: 0.4533rem;
+}
+.content_tip{
+    overflow: hidden;
+    border-radius: 0.16rem;
+}

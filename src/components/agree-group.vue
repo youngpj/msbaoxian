@@ -1,0 +1,135 @@
+<template>
+    <div class="agree-group">
+        <input type="checkbox" :checked="value" :value="currentValue" @click="handleInput" />
+        <label>我已阅读
+          <span  @click="toXuzhi" >《投保须知》</span> 和 <span @click="toProvision">《保险条款》</span>
+            <!-- <a :href="xuzhiUrl">《投保须知》</a>和
+            <a :href="tiaokuanUrl">《保险条款》</a> -->
+        </label>
+    </div>
+</template>
+<script>
+// import xuzhiUrl from "@/assets/doc/toubaoxuzhi.pdf";
+// import tiaokuanUrl from "@/assets/doc/baoxiantiaokuan.pdf";
+var download = function(data, name) {
+        if (!data) {
+            return
+        }
+        let url = window.URL.createObjectURL(new Blob([data]))
+        let link = document.createElement('a')
+        link.style.display = 'none'
+        link.href = url
+        link.setAttribute('download', name)
+
+        document.body.appendChild(link)
+        link.click()
+    }
+export default {
+  data: function() {
+    return {
+      currentValue: this.value,
+      // xuzhiUrl: xuzhiUrl,
+      // tiaokuanUrl: tiaokuanUrl
+    };
+  },
+  props: ["value","type"],
+  methods: {
+    /**
+     * 跳转条款链接
+     */
+    toProvision(){
+      this.$trackEvent('insure','terms')
+      if(this.type=='old'){
+        this.$switchTo('/provisionkeb')
+      }else{
+        this.$switchTo('/provisionseb')
+      }
+    },
+    /**
+     * 跳转投保须知
+     */
+    toXuzhi(){
+      this.$trackEvent('insure','notice')
+      this.$switchTo('/xuzhi')
+    },
+    handleInput(evt) {
+      setTimeout(() => {
+        var value = evt.target.checked;
+        console.log(value);
+        this.$emit("input", value);
+      });
+    },
+    downloadFile(url, name) {
+      console.log(url);
+      // v.$http.get(url).then(res => {
+      //     downloadUrl(res.request.responseURL);
+      // })
+
+      this.axios({
+        method: "get",
+        url: url,
+        responseType: "blob"
+      })
+        .then(response => {
+          download(response.data, name);
+        })
+        .catch(error => {});
+    }
+  }
+};
+</script>
+<style scoped>
+.agree-group {
+  background-color: #fff;
+  padding: 0.32rem 0.4rem;
+  font-size: 0.373333rem;
+}
+
+label a {
+  color: #74adff;
+  text-decoration: none;
+}
+label span{
+      color: #68a5fe;
+}
+input {
+  position: relative;
+  top: -0.026667rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+}
+
+input::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/image/checkbox-off.png");
+  background-size: auto 100%;
+  width: 2.666667rem;
+  background-repeat: no-repeat;
+}
+
+input::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/image/checkbox-on.png");
+  background-size: 100%;
+  opacity: 0;
+}
+
+input:checked::after {
+  opacity: 1;
+}
+</style>

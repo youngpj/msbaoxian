@@ -1,0 +1,114 @@
+.page {
+    background-color: #f8f8f8;
+    padding-bottom: 1.493333rem;
+}
+
+.info-container {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #eaedfd;
+    margin-bottom: .426667rem;
+}
+
+.info-title {
+    padding: .346667rem .426667rem;
+    font-size: .426667rem;
+    color: #333;
+    font-weight: 600;
+    border-bottom: 1px solid #eaedfd;
+}
+
+.info-item-content {
+    overflow: hidden;
+    padding: .213333rem .426667rem;
+}
+
+.info-item {
+    clear: both;
+    font-size: .373333rem;
+    color: #646464;
+    margin: .213333rem auto;
+    overflow: hidden;
+}
+
+.info-item .key {
+    float: left;
+}
+
+.info-item .val {
+    float: right;
+    max-width: 5.333333rem;
+    text-align: right;
+}
+
+.pay-container {
+    clear: both;
+    height: 1.28rem;
+    line-height: 1.28rem;
+    padding: 0 .426667rem;
+    background-color: #fff;
+    margin-bottom: .933333rem;
+    border-top: 1px solid #eaedfd;
+    border-bottom: 1px solid #eaedfd;
+}
+
+.pay-key {
+    float: left;
+    font-size: .426667rem;
+    color: #333333;
+    font-weight: 600;
+}
+
+.pay-val {
+    float: right;
+    font-size: .746667rem;
+    color: #F9830C;
+}
+
+.footer-btn{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1.493333rem;
+    line-height: 1.493333rem;
+    background-image: linear-gradient(48deg, #FFB237 0%, #FF8723 100%);
+    color: #fff;
+    text-align: center;
+    font-size: .48rem;
+    
+}
+
+.notice {
+    position: relative;
+    background-color: #FFA12D;
+    color: #fff;
+    padding: .266667rem .32rem .186667rem 1.04rem;
+    line-height: 0.5333rem;
+    font-size: .373333rem;
+}
+
+.notice img.laba {
+    position: absolute;
+    top: 0.5333rem;
+    left: .373333rem;
+    width: .48rem;
+}
+table{
+    width: 100%;
+    margin: 0.5333rem auto 0.5333rem;
+}
+table th{
+    background: #EAEDFD;
+    border: 1px solid #E6E6E6;
+    font-size: 0.3733rem;
+    color: #333333;
+    line-height: 1.0133rem;
+    text-align: center;
+}
+table td{
+    text-align: center;
+    border: 1px solid #E6E6E6;
+    font-size: 0.3733rem;
+    color: #646464;
+    line-height: 1.0133rem;
+}
